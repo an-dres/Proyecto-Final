@@ -31,3 +31,32 @@ typedef struct Ingresos{
  	float IESS;
  	float totalEgresos;
  }Egresos;
+ typedef struct BeneficioSocial{
+ 	float vacaciones;
+ 	float decimoTercero;
+ 	float decimoCuarto;
+ 	float fondosReserva;
+ 	float totalBeneficios;
+ }BeneficioSocial;
+ typedef struct Rol{
+ 	Encabezado e;
+ 	Ingresos i;
+ 	Egresos eg;
+ 	BeneficioSocial bs;
+ 	float totalRol;
+ }Rol;
+void gotoxy(int x, int y)
+{
+ HANDLE hcon;
+ hcon = GetStdHandle(STD_OUTPUT_HANDLE);
+ COORD dwPos;
+ dwPos.X = x;
+ dwPos.Y = y;
+ SetConsoleCursorPosition(hcon,dwPos);
+}
+int main() {
+	struct Rol r;
+	gotoxy(50,2);printf("ROL DE PAGO");
+
+	return 0;
+}
